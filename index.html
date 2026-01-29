@@ -67,9 +67,11 @@
       .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
       
       html, body {
-        height: 100%;
-        overflow: hidden; 
+        min-height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
         margin: 0;
+        scroll-behavior: smooth;
       }
     </style>
 <script type="importmap">
@@ -87,7 +89,7 @@
 </script>
 </head>
   <body class="bg-slate-50 text-slate-800 font-sans antialiased">
-    <div id="root" class="h-full w-full"></div>
+    <div id="root" class="w-full"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>
