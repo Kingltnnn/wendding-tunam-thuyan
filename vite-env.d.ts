@@ -1,80 +1,77 @@
 
 // Manual type declarations to resolve "Cannot find type definition file for 'vite/client'"
-// Each module uses a unique internal constant name to avoid "Duplicate identifier" errors
-// which can occur when multiple modules are merged or when declarations overlap with 
-// other environment type definitions.
 
-// Fix: Added 'export {}' to ensure this file is treated as a module, isolating internal 'const' declarations.
-export {};
-
-declare global {
-  interface ImportMetaEnv {
-    readonly [key: string]: string | boolean | undefined;
-  }
-
-  interface ImportMeta {
-    readonly env: ImportMetaEnv;
-  }
+/**
+ * Declaring interfaces at the top level of a non-module file (no imports/exports)
+ * makes them available globally, augmenting existing types like ImportMeta.
+ */
+interface ImportMetaEnv {
+  readonly [key: string]: string | boolean | undefined;
 }
 
-// Fix: Use unique internal identifier names for each module to prevent 'src' duplication errors across different asset types.
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}
+
+// Visual assets
+// Scoped ambient module declarations for various file types.
 declare module '*.svg' {
-  const svg_src_unique: string;
-  export default svg_src_unique;
+  const src: string;
+  export default src;
 }
 
 declare module '*.png' {
-  const png_src_unique: string;
-  export default png_src_unique;
+  const src: string;
+  export default src;
 }
 
 declare module '*.jpg' {
-  const jpg_src_unique: string;
-  export default jpg_src_unique;
+  const src: string;
+  export default src;
 }
 
 declare module '*.jpeg' {
-  const jpeg_src_unique: string;
-  export default jpeg_src_unique;
+  const src: string;
+  export default src;
 }
 
 declare module '*.gif' {
-  const gif_src_unique: string;
-  export default gif_src_unique;
+  const src: string;
+  export default src;
 }
 
 declare module '*.webp' {
-  const webp_src_unique: string;
-  export default webp_src_unique;
+  const src: string;
+  export default src;
 }
 
 declare module '*.ico' {
-  const ico_src_unique: string;
-  export default ico_src_unique;
+  const src: string;
+  export default src;
 }
 
-// Fix: Use unique internal identifier names for each CSS module type to prevent 'classes' duplication errors.
+// CSS modules
 declare module '*.module.css' {
-  const css_classes_unique: { readonly [key: string]: string };
-  export default css_classes_unique;
+  const classes: { readonly [key: string]: string };
+  export default classes;
 }
 
 declare module '*.module.scss' {
-  const scss_classes_unique: { readonly [key: string]: string };
-  export default scss_classes_unique;
+  const classes: { readonly [key: string]: string };
+  export default classes;
 }
 
 declare module '*.module.sass' {
-  const sass_classes_unique: { readonly [key: string]: string };
-  export default sass_classes_unique;
+  const classes: { readonly [key: string]: string };
+  export default classes;
 }
 
 declare module '*.module.less' {
-  const less_classes_unique: { readonly [key: string]: string };
-  export default less_classes_unique;
+  const classes: { readonly [key: string]: string };
+  export default classes;
 }
 
 declare module '*.module.styl' {
-  const styl_classes_unique: { readonly [key: string]: string };
-  export default styl_classes_unique;
+  const classes: { readonly [key: string]: string };
+  export default classes;
 }
