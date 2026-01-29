@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import Reveal from './Reveal';
 
@@ -10,13 +11,10 @@ const Events: React.FC = () => {
   });
 
   useEffect(() => {
-    // Target date: March 8, 2026 at 11:00 AM
     const targetDate = new Date('2026-03-08T11:00:00').getTime();
-
     const interval = setInterval(() => {
       const now = new Date().getTime();
       const difference = targetDate - now;
-
       if (difference > 0) {
         setTimeLeft({
           days: Math.floor(difference / (1000 * 60 * 60 * 24)),
@@ -28,23 +26,17 @@ const Events: React.FC = () => {
         clearInterval(interval);
       }
     }, 1000);
-
     return () => clearInterval(interval);
   }, []);
 
   const calendarDays = [];
-  const daysInMonth = 31; // March
-  const startDay = 0; // March 1, 2026 is a Sunday (0=Sun, ..., 6=Sat)
-
-  for (let i = 0; i < startDay; i++) {
-    calendarDays.push(null);
-  }
-  for (let i = 1; i <= daysInMonth; i++) {
-    calendarDays.push(i);
-  }
+  const daysInMonth = 31;
+  const startDay = 0;
+  for (let i = 0; i < startDay; i++) calendarDays.push(null);
+  for (let i = 1; i <= daysInMonth; i++) calendarDays.push(i);
 
   return (
-    <section id="events" className="h-screen w-full snap-start relative overflow-hidden flex flex-col bg-gray-900">
+    <section id="events" className="min-h-screen w-full relative overflow-hidden flex flex-col bg-gray-900">
        <div className="absolute inset-0 z-0">
           <img 
             src="https://i.ibb.co/3nbsNmP/1D0A4111.jpg" 
@@ -54,9 +46,9 @@ const Events: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/30"></div>
        </div>
 
-       <div className="relative z-10 flex-1 flex flex-col px-6 md:px-12 pt-12 text-white">
-          <div className="flex flex-col items-center md:items-end w-full mt-8 md:mt-16">
-             <Reveal animation="fade-up" className="text-right mb-6 md:mb-8 md:mr-12">
+       <div className="relative z-10 flex-1 flex flex-col px-6 md:px-12 py-16 md:py-24 text-white">
+          <div className="flex flex-col items-center md:items-end w-full mb-12">
+             <Reveal animation="fade-up" className="text-right mb-8 md:mr-12">
                <h1 className="font-script text-5xl md:text-8xl drop-shadow-lg">Wedding</h1>
                <p className="font-serif text-wedding-gold tracking-[0.3em] uppercase text-xs md:text-sm mt-2">Tháng 03 . 2026</p>
              </Reveal>
@@ -66,7 +58,6 @@ const Events: React.FC = () => {
                   {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map((d, i) => (
                     <div key={i} className="text-gray-300 font-bold">{d}</div>
                   ))}
-                  
                   {calendarDays.map((day, idx) => {
                     if (!day) return <div key={idx}></div>;
                     const isWeddingDay = day === 8;
@@ -89,10 +80,9 @@ const Events: React.FC = () => {
              </Reveal>
           </div>
 
-          <div className="mt-auto mb-6 md:mb-12 w-full">
-             <Reveal animation="slide-left" delay={300} className="flex flex-col md:flex-row items-center md:items-end gap-4 md:gap-8">
+          <div className="mt-auto mb-12 w-full">
+             <Reveal animation="slide-left" delay={300} className="flex flex-col md:flex-row items-center md:items-end gap-4 md:gap-8 justify-center">
                 <h3 className="font-script text-4xl md:text-6xl mb-2 md:mb-0 text-white drop-shadow-md">Chỉ còn....</h3>
-                
                 <div className="flex gap-3 md:gap-6">
                    {[
                      { label: 'ngày', value: timeLeft.days },
@@ -100,7 +90,7 @@ const Events: React.FC = () => {
                      { label: 'phút', value: timeLeft.minutes },
                      { label: 'giây', value: timeLeft.seconds }
                    ].map((item, idx) => (
-                      <div key={idx} className="bg-white/95 backdrop-blur-sm text-gray-800 rounded-md p-2 md:p-4 w-[60px] md:w-[90px] flex flex-col items-center shadow-xl">
+                      <div key={idx} className="bg-white/95 backdrop-blur-sm text-gray-800 rounded-md p-2 md:p-4 w-[65px] md:w-[95px] flex flex-col items-center shadow-xl">
                          <span className="text-xl md:text-4xl font-bold font-serif leading-none mb-1">{item.value}</span>
                          <span className="text-[10px] md:text-xs uppercase tracking-wider text-gray-500">{item.label}</span>
                       </div>
@@ -110,9 +100,9 @@ const Events: React.FC = () => {
           </div>
        </div>
 
-       <div className="relative z-10 bg-white/95 backdrop-blur-md px-6 py-6 md:py-8 text-center shrink-0 shadow-[0_-10px_40px_rgba(0,0,0,0.2)]">
+       <div className="relative z-10 bg-white/95 backdrop-blur-md px-6 py-8 md:py-12 text-center shrink-0 shadow-[0_-10px_40px_rgba(0,0,0,0.2)]">
           <Reveal animation="fade-up" delay={400}>
-            <p className="font-serif text-gray-700 text-sm md:text-lg leading-relaxed max-w-3xl mx-auto mb-2">
+            <p className="font-serif text-gray-700 text-sm md:text-lg leading-relaxed max-w-3xl mx-auto">
               Chúng mình rất mong sự hiện diện của bạn để cùng nhau chung vui và lưu lại những khoảnh khắc đáng nhớ trong ngày cưới.
             </p>
           </Reveal>
