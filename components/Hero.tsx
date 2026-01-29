@@ -3,7 +3,7 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <section id="home" className="relative h-screen w-full overflow-hidden snap-start bg-white p-0">
+    <section id="home" className="relative h-screen w-full overflow-hidden bg-white p-0">
       
       {/* Iframe Canva phủ kín toàn bộ diện tích trang đầu tiên */}
       <div className="w-full h-full">
