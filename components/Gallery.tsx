@@ -5,7 +5,7 @@ import Reveal from './Reveal';
 const photos = [
   "/img/1D0A4394.webp",
   "/img/1D0A3821.webp",
-  "/img/1D0A4046.webp",
+  "/img/1D0A4524.webp",
   "/img/1D0A4111.webp",
   "/img/1D0A4232.webp",
   "/img/1D0A4340.webp",
