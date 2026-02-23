@@ -1,13 +1,5 @@
 import React from 'react';
 
-export interface GuestRsvp {
-  name: string;
-  email: string;
-  attending: 'yes' | 'no' | 'maybe';
-  guestsCount: number;
-  message: string;
-}
-
 export interface GalleryImage {
   id: number;
   url: string;
