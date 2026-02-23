@@ -68,8 +68,8 @@ cô dâu chú rể</h2>
              <BankCard 
               bankName="Vietcombank"
               accountName="BÙI THỊ THÚY AN"
-              accountNumber="9876 5432 1111"
-              qrCode="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=987654321111"
+              accountNumber="1045386894"
+              qrCode="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=1045386894"
             />
             </Reveal>
           </div>
