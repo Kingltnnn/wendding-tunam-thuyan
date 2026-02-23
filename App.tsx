@@ -4,9 +4,9 @@ import Hero from './components/Hero';
 import Couple from './components/Couple';
 import Countdown from './components/Countdown';
 import Events from './components/Events';
+import DateBlock from './components/DateBlock';
 import Location from './components/Location';
 import Gallery from './components/Gallery';
-import Rsvp from './components/Rsvp';
 import GiftBox from './components/GiftBox';
 import Footer from './components/Footer';
 import MusicPlayer from './components/MusicPlayer';
@@ -19,9 +19,9 @@ const App: React.FC = () => {
         <Couple />
         <Countdown />
         <Events />
+        <DateBlock />
         <Location />
         <Gallery />
-        <Rsvp />
         <GiftBox />
         <Footer />
       </main>
