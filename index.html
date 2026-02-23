@@ -6,21 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tú Nam & Thúy An - Wedding Invitation</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
               script: ['"Great Vibes"', 'cursive'],
+              'dancing-script': ['"Dancing Script"', 'cursive'],
               serif: ['"Playfair Display"', 'serif'],
               sans: ['"Lato"', 'sans-serif'],
             },
             colors: {
+              gray: {
+                300: '#790B0B',
+                400: '#790B0B',
+                500: '#790B0B',
+                600: '#790B0B',
+                700: '#790B0B',
+                800: '#790B0B',
+                900: '#790B0B',
+              },
               wedding: {
                 pink: '#fce7e7',
-                gold: '#c5a059',
-                dark: '#2c3e50',
+                gold: '#790B0B',
+                dark: '#790B0B',
                 accent: '#e69090'
               }
             }
@@ -88,7 +98,7 @@
 }
 </script>
 </head>
-  <body class="bg-slate-50 text-slate-800 font-sans antialiased">
+  <body class="bg-white text-[#790B0B] font-sans antialiased">
     <div id="root" class="w-full"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
