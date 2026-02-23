@@ -17,8 +17,8 @@ const Couple: React.FC = () => {
           {/* Groom (Nam) */}
           <Reveal animation="slide-left" delay={200} className="flex flex-row items-center gap-4 w-full h-full justify-center md:justify-end md:pr-8">
              <div className="text-right flex-1 md:flex-none">
-                <h3 className="text-wedding-gold font-serif uppercase tracking-widest text-[10px] md:text-sm mb-0 md:mb-2">Chú Rể</h3>
-                <h2 className="font-script text-3xl md:text-6xl text-gray-800 leading-none mb-1 md:mb-2">Tú Nam</h2>
+                <img src="https://assets.cinelove.me/templates/assets/428a253a-0bb7-412b-8861-ec12c5f06582/4d0b61d0-f9f4-4464-844b-c0f08ee19594.png" alt="Chú Rể" className="h-4 md:h-6 object-contain mb-1 md:mb-2 ml-auto" />
+                <h2 className="font-dancing-script text-4xl md:text-7xl text-gray-800 leading-none mb-1 md:mb-2 font-semibold">Tú Nam</h2>
                 <div className="font-serif text-gray-600 text-[10px] md:text-sm leading-tight space-y-0.5">
                     <p>Bố: Lê Duy Cử</p>
                     <p>Mẹ: Vũ Thị Hồng Nga</p>
@@ -27,7 +27,7 @@ const Couple: React.FC = () => {
              
              <div className="relative w-[45%] md:w-[220px] aspect-[2/3] overflow-hidden shadow-lg rounded-sm group flex-shrink-0">
                <img 
-                 src="https://i.ibb.co/DgrwVG42/1D0A4046.jpg" 
+                 src="/img/1D0A4046.webp" 
                  alt="Tú Nam" 
                  className="w-full h-full object-cover"
                />
@@ -38,8 +38,8 @@ const Couple: React.FC = () => {
           {/* Bride (An) */}
           <Reveal animation="slide-right" delay={400} className="flex flex-row-reverse items-center gap-4 w-full h-full justify-center md:justify-start md:pl-8">
              <div className="text-left flex-1 md:flex-none">
-                <h3 className="text-wedding-gold font-serif uppercase tracking-widest text-[10px] md:text-sm mb-0 md:mb-2">Cô Dâu</h3>
-                <h2 className="font-script text-3xl md:text-6xl text-gray-800 leading-none mb-1 md:mb-2">Thúy An</h2>
+                <img src="https://assets.cinelove.me/templates/assets/428a253a-0bb7-412b-8861-ec12c5f06582/c05f1b73-52d7-4db5-b1b7-ebe97abdb927.png" alt="Cô Dâu" className="h-4 md:h-6 object-contain mb-1 md:mb-2 mr-auto" />
+                <h2 className="font-dancing-script text-4xl md:text-7xl text-gray-800 leading-none mb-1 md:mb-2 font-semibold">Thúy An</h2>
                 <div className="font-serif text-gray-600 text-[10px] md:text-sm leading-tight space-y-0.5">
                     <p>Bố: Bùi Xuân Đậu</p>
                     <p>Mẹ: Phạm Thị Châm</p>
@@ -48,7 +48,7 @@ const Couple: React.FC = () => {
 
              <div className="relative w-[45%] md:w-[220px] aspect-[2/3] overflow-hidden shadow-lg rounded-sm group flex-shrink-0">
                <img 
-                 src="https://i.ibb.co/YFjWStJc/1D0A4559.jpg" 
+                 src="/img/1D0A4559.webp" 
                  alt="Thúy An" 
                  className="w-full h-full object-cover"
                />
