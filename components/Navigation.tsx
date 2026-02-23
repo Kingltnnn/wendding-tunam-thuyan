@@ -20,7 +20,7 @@ const Navigation: React.FC = () => {
     { name: 'Events', href: '#events' },
     { name: 'Location', href: '#location' },
     { name: 'Gallery', href: '#gallery' },
-    { name: 'RSVP', href: '#rsvp' },
+    { name: 'Lì Xì', href: '#giftbox' },
   ];
 
   return (
