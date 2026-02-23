@@ -38,38 +38,38 @@ const GiftBox: React.FC = () => {
               className="inline-block cursor-pointer transition-transform hover:scale-110 mb-6"
               onClick={() => setIsOpen(!isOpen)}
             >
-              <div className="w-20 h-28 md:w-24 md:h-32 bg-red-600 rounded-lg relative overflow-hidden shadow-xl border border-red-700 flex flex-col items-center justify-center animate-bounce">
-                <div className="absolute top-0 w-full h-10 md:h-12 bg-red-700 rounded-b-[50%] shadow-sm"></div>
-                <div className="w-6 h-6 md:w-8 md:h-8 bg-yellow-400 rounded-full z-10 border-2 border-yellow-500 flex items-center justify-center shadow-md mt-4 md:mt-6">
-                  <div className="w-3 h-3 md:w-4 md:h-4 bg-yellow-500 rounded-full"></div>
+              <div className="w-20 h-28 bg-red-600 rounded-lg relative overflow-hidden shadow-xl border border-red-700 flex flex-col items-center justify-center animate-bounce">
+                <div className="absolute top-0 w-full h-10 bg-red-700 rounded-b-[50%] shadow-sm"></div>
+                <div className="w-6 h-6 bg-yellow-400 rounded-full z-10 border-2 border-yellow-500 flex items-center justify-center shadow-md mt-4">
+                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                 </div>
-                <p className="text-yellow-400 font-serif font-bold mt-2 z-10 text-xs md:text-sm">Lì Xì</p>
+                <p className="text-yellow-400 font-serif font-bold mt-2 z-10 text-xs">Lì Xì</p>
               </div>
             </div>
-            <h2 className="font-serif text-3xl md:text-4xl text-gray-800 mb-4">Gửi quà tới 
+            <h2 className="font-serif text-3xl text-gray-800 mb-4">Gửi quà tới 
 cô dâu chú rể</h2>
-            <p className="text-gray-500 mb-8 max-w-lg mx-auto text-sm md:text-base">
+            <p className="text-gray-500 mb-8 max-w-lg mx-auto text-sm">
               <br/>
               <span className="text-xs italic text-gray-400">(Nhấn vào phong bao lì xì)</span>
             </p>
         </Reveal>
         
         <div className={`transition-all duration-700 ease-in-out overflow-hidden ${isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center items-center max-w-2xl mx-auto pt-4">
+          <div className="grid grid-cols-1 gap-8 justify-center items-center max-w-2xl mx-auto pt-4">
             <Reveal animation="slide-left" delay={100}>
               <BankCard 
                   bankName="Vietcombank"
                   accountName="LÊ TÚ NAM"
-                  accountNumber="1046220082"
-                  qrCode="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=1046220082"
+                  accountNumber="1234 5678 9999"
+                  qrCode="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=123456789999"
               />
             </Reveal>
             <Reveal animation="slide-right" delay={200}>
              <BankCard 
               bankName="Vietcombank"
               accountName="BÙI THỊ THÚY AN"
-              accountNumber="1045386894"
-              qrCode="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=1045386894"
+              accountNumber="9876 5432 1111"
+              qrCode="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=987654321111"
             />
             </Reveal>
           </div>

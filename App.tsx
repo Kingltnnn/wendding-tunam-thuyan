@@ -13,19 +13,23 @@ import MusicPlayer from './components/MusicPlayer';
 
 const App: React.FC = () => {
   return (
-    <div className="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth no-scrollbar selection:bg-wedding-pink selection:text-wedding-dark">
-      <main>
-        <Hero />
-        <Couple />
-        <Countdown />
-        <Events />
-        <DateBlock />
-        <Location />
-        <Gallery />
-        <GiftBox />
-        <Footer />
-      </main>
-      <MusicPlayer />
+    <div className="min-h-screen w-full bg-gray-100 flex justify-center">
+      <div className="w-full max-w-md h-screen bg-white relative shadow-2xl overflow-hidden">
+        <div className="h-full w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth no-scrollbar selection:bg-wedding-pink selection:text-wedding-dark">
+          <main>
+            <Hero />
+            <Couple />
+            <Countdown />
+            <Events />
+            <DateBlock />
+            <Location />
+            <Gallery />
+            <GiftBox />
+            <Footer />
+          </main>
+        </div>
+        <MusicPlayer />
+      </div>
     </div>
   );
 };

@@ -5,7 +5,7 @@ import Reveal from './Reveal';
 const photos = [
   "/img/1D0A4394.webp",
   "/img/1D0A3821.webp",
-  "/img/1D0A4487.webp",
+  "/img/1D0A4046.webp",
   "/img/1D0A4111.webp",
   "/img/1D0A4232.webp",
   "/img/1D0A4340.webp",
@@ -14,10 +14,10 @@ const photos = [
 const Gallery: React.FC = () => {
   return (
     <section id="gallery" className="min-h-screen w-full bg-white flex flex-col py-16">
-      <div className="w-full h-full flex flex-col p-4 md:p-6 max-w-6xl mx-auto">
+      <div className="w-full h-full flex flex-col p-4 max-w-6xl mx-auto">
         
         {/* Top Section */}
-        <div className="flex flex-row items-center justify-center gap-4 md:gap-12 h-40 md:h-64 mb-12 shrink-0">
+        <div className="flex flex-row items-center justify-center gap-4 h-40 mb-12 shrink-0">
             <Reveal animation="zoom" className="h-full aspect-[3/4] relative p-1 bg-[#4A6FA5] shadow-lg rotate-[-3deg]">
                 <div className="w-full h-full border-[2px] border-white overflow-hidden bg-gray-200">
                     <img src={photos[0]} alt="Couple Portrait" className="w-full h-full object-cover" loading="eager" />
@@ -25,14 +25,14 @@ const Gallery: React.FC = () => {
             </Reveal>
 
             <Reveal animation="fade-up" delay={200} className="flex flex-col items-start justify-center text-[#4A6FA5]">
-                <h2 className="font-script text-4xl md:text-6xl lg:text-7xl leading-none ml-2">Kỷ niệm</h2>
-                <span className="font-serif italic text-xs md:text-xl text-gray-500 self-center my-1">của</span>
-                <h2 className="font-script text-4xl md:text-6xl lg:text-7xl leading-none ml-8 md:ml-12">Chúng mình</h2>
+                <h2 className="font-script text-4xl leading-none ml-2">Kỷ niệm</h2>
+                <span className="font-serif italic text-xs text-gray-500 self-center my-1">của</span>
+                <h2 className="font-script text-4xl leading-none ml-8">Chúng mình</h2>
             </Reveal>
         </div>
 
         {/* Grid Section */}
-        <div className="grid grid-cols-2 gap-3 md:gap-6">
+        <div className="grid grid-cols-2 gap-3">
           {photos.map((photo, index) => (
             <Reveal 
               key={index} 

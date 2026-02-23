@@ -41,7 +41,7 @@ const MusicPlayer: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-6 left-6 z-50">
+    <div className="absolute bottom-6 left-6 z-50">
       <audio ref={audioRef} src={musicUrl} loop />
       <button 
         onClick={togglePlay}
