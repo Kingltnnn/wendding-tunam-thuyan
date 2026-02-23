@@ -29,7 +29,7 @@ const Location: React.FC = () => {
             Tư Gia Nhà Trai
           </h2>
           <p className="text-gray-600 mb-3 md:mb-8 font-sans text-[10px] sm:text-sm md:text-lg shrink-0">
-            Hoàng Mai - Hà Nội
+           Đường An - TP.Hải Phòng
           </p>
           
           <div className="w-full max-w-md border border-[#8B1A1A] p-0.5 md:p-1 bg-white flex-1 min-h-0 relative">
