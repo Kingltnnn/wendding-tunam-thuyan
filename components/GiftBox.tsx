@@ -60,8 +60,8 @@ cô dâu chú rể</h2>
               <BankCard 
                   bankName="Vietcombank"
                   accountName="LÊ TÚ NAM"
-                  accountNumber="1045220082"
-                  qrCode="https://img.vietqr.io/image/VCB-1045220082-compact.jpg"
+                  accountNumber="1046220082"
+                  qrCode="https://i.ibb.co/99V0dN5P/img-1.png"
               />
             </Reveal>
             <Reveal animation="slide-right" delay={200}>
